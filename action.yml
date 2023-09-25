@@ -1,0 +1,14 @@
+name: Delete Stale branches
+description: This action deletes branches that have 'stale/' prefix on it's name
+
+inputs:
+  token:
+    description: 'GitHub token used to create an authenticated client'
+    required: true
+  repository:
+    description: 'Slug of the repo on the format owner/repo'
+    required: true
+
+runs: 
+  using: 'docker'
+  image: 'Dockerfile'
